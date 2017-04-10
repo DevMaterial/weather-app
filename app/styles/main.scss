@@ -1,0 +1,349 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300';
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
+
+$color1: #C8DAE6;
+$color2: white;
+$color3: #B8B8B8;
+$color4: #FFCD41;
+$color5: #2092A9;
+$color6: #f4e842;
+$color7: rgb(153, 185, 255);
+$color8: rgba(153, 185, 255, 0.7);
+$color9: rgb(206, 216, 239);
+$color10: rgba(206, 216, 239, 0.7);
+
+body {
+    background-color: lighten($color1, 10%);
+}
+
+figure {
+	margin: 5em auto;
+	width: 350px;
+	height: 150px;
+}
+
+h2{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+}
+
+.center {
+  text-align: center;
+}
+
+.shell {
+  background-color: white;
+  width: 270px;
+  height: 320px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0px 0px 25px 1px rgba(50, 50, 50, 0.1);
+  margin-top: 100px;
+}
+
+.column-left{ float: left; width: 33%; }
+.column-right{ float: right; width: 33%; }
+.column-center{ display: inline-block; width: 33%; }
+
+/******** LEFT SECTION ********/
+
+#temperature{
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 90px;
+  margin-right: 70px;
+  color: rgb(184,184,184);
+}
+
+#city{
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  margin-right: 60px;
+  font-size: 25px;
+  color: rgb(184,184,184);
+}
+
+.button-container{
+  padding-top: 25px;
+}
+
+.left{
+  padding-top: 90px;
+}
+
+/******************************/
+
+/**Buttons**/
+.temp-toggle-button{
+  width: 100px;
+  height: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  -webkit-appearance: none;
+  background-color: white;
+  outline: none;
+}
+
+/**Weather Icons**/
+.weather-icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    float: right;
+    margin: 40px 40px 0 0;
+    animation: weather-icon-move 5s ease-in-out infinite;
+}
+
+.sun {
+    background: $color4;
+	border-radius: 100%;
+	box-shadow: rgba(255,255,0,0.1) 0 0 0 4px;
+    animation: light 800ms ease-in-out infinite alternate, weather-icon-move 5s ease-in-out infinite;
+}
+
+@keyframes light {
+    from {
+        box-shadow: rgba(255,255,0,0.2) 0 0 0 10px;
+    }
+    to {
+        box-shadow: rgba(255,255,0,0.2) 0 0 0 17px;
+    }
+}
+
+.cloud {
+    margin-right:60px;
+    background: darken($color1, 5%);
+	border-radius: 20px;
+    width: 25px;
+    height: 25px;
+    box-shadow:
+		darken($color1, 5%) 24px -6px 0 2px,
+		darken($color1, 5%) 10px 5px 0 5px,
+		darken($color1, 5%) 30px 5px 0 2px,
+        darken($color1, 5%) 11px -8px 0 -3px,
+        darken($color1, 5%) 25px 11px 0 -1px;
+
+
+    &:after {
+        content: "";
+        position: absolute;
+        border-radius: 10px;
+        background-color: transparent;
+        width: 4px;
+        height: 12px;
+        left: 0;
+        top: 31px;
+        transform: rotate(30deg);
+
+        animation: rain 800ms ease-in-out infinite alternate;
+    }
+}
+
+.cloudy {
+    margin-right:60px;
+    background: darken($color1, 5%);
+	border-radius: 20px;
+    width: 25px;
+    height: 25px;
+    box-shadow:
+		darken($color1, 5%) 24px -6px 0 2px,
+		darken($color1, 5%) 10px 5px 0 5px,
+		darken($color1, 5%) 30px 5px 0 2px,
+        darken($color1, 5%) 11px -8px 0 -3px,
+        darken($color1, 5%) 25px 11px 0 -1px,
+}
+
+.thunderstorm {
+    margin-right:60px;
+    background: darken($color1, 5%);
+	  border-radius: 20px;
+    width: 25px;
+    height: 25px;
+    box-shadow:
+		darken($color1, 5%) 24px -6px 0 2px,
+		darken($color1, 5%) 10px 5px 0 5px,
+		darken($color1, 5%) 30px 5px 0 2px,
+        darken($color1, 5%) 11px -8px 0 -3px,
+        darken($color1, 5%) 25px 11px 0 -1px;
+
+
+    &:after {
+        content: "";
+        position: absolute;
+        border-radius: 10px;
+        background-color: transparent;
+        width: 2px;
+        height: 15px;
+        left: 0px;
+        top: 35px;
+        transform: rotate(20deg);
+
+        animation: thunder 1000ms ease-in-out infinite alternate;
+    }
+}
+
+.snow {
+    margin-right:60px;
+    background: darken($color1, 5%);
+	border-radius: 20px;
+    width: 25px;
+    height: 25px;
+    box-shadow:
+		darken($color1, 5%) 24px -6px 0 2px,
+		darken($color1, 5%) 10px 5px 0 5px,
+		darken($color1, 5%) 30px 5px 0 2px,
+        darken($color1, 5%) 11px -8px 0 -3px,
+        darken($color1, 5%) 25px 11px 0 -1px;
+
+
+    &:after {
+        content: "";
+        position: absolute;
+        border-radius: 10px;
+        background-color: transparent;
+        width: 6px;
+        height: 6px;
+        left: 0px;
+        top: 35px;
+        transform: rotate(20deg);
+
+        animation: snow 800ms ease-in-out infinite alternate;
+    }
+}
+
+.misty {
+    margin-right:60px;
+    background: darken($color1, 5%);
+	border-radius: 20px;
+    width: 25px;
+    height: 25px;
+    box-shadow:
+		darken($color1, 5%) 24px -6px 0 2px,
+		darken($color1, 5%) 10px 5px 0 5px,
+		darken($color1, 5%) 30px 5px 0 2px,
+        darken($color1, 5%) 11px -8px 0 -3px,
+        darken($color1, 5%) 25px 11px 0 -1px;
+
+
+    &:after {
+        content: "";
+        position: absolute;
+        border-radius: 10px;
+        background-color: transparent;
+        width: 4px;
+        height: 35px;
+        left: 0;
+        top: 20px;
+        transform: rotate(90deg);
+
+        animation: mist 4000ms ease-in-out infinite alternate;
+    }
+}
+
+@keyframes rain {
+    from {
+        box-shadow:
+        $color5 8px 0px,
+		$color5 32px -6px,
+		$color5 20px 0px;
+    }
+    to {
+        box-shadow:
+        $color5 8px 6px,
+		$color5 32px 0px,
+		$color5 20px 6px;
+    }
+}
+
+@keyframes thunder {
+    from {
+        box-shadow:
+        $color5 27px -2px,
+		    $color5 35px -8px;
+        content: url('https://s22.postimg.org/88zew2tr5/0_XKb8k_U.png');
+    }
+    to {
+        box-shadow:
+        $color5 27px 2px,
+		    $color5 35px -4px;
+        content: url('https://s22.postimg.org/88zew2tr5/0_XKb8k_U.png');
+
+    }
+}
+
+@keyframes snow {
+    from {
+        box-shadow:
+        $color7 8px 0px 0px 1px,
+		$color7 32px -6px 0px 1px,
+		$color7 20px 0px 0px 1px;
+    }
+    to {
+        box-shadow:
+        $color8 8px 6px 0px 1.2px,
+		$color8 32px 0px 0px 1.2px,
+		$color8 20px 6px 0px 1.2px;
+    }
+}
+
+@keyframes mist {
+    from {
+        box-shadow:
+        $color9 6px -27px,
+		$color9 14px -27px;
+    }
+    to {
+        box-shadow:
+        $color10 8px -27px,
+		$color10 16px -27px;
+    }
+}
+
+@keyframes weather-icon-move {
+	50% {
+        transform: translateY(-8px);
+    }
+}
+
+.inspiration {
+    margin-top: 80px;
+    color: darken($color1, 25%);
+    font-family: 'Lato', sans-serif;
+    font-weight:300;
+    font-size:24px;
+    text-align: center;
+
+
+    a {
+        color: #FF8F8F;
+        font-weight:400;
+        animation: all 300ms ease-in-out;
+    }
+}
+
+@keyframes appear {
+  0% {
+    transform:scale(0);
+  }
+  50% {
+    transform:scale(1.05)
+  }
+  75% {
+    transform:scale(0.95)
+  }
+  100% {
+   transform:scale(1)
+  }
+}
+
+@keyframes title-appear {
+    from {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

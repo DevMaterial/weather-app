@@ -1,0 +1,235 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300';
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
+body {
+  background-color: #ebf2f6; }
+
+figure {
+  margin: 5em auto;
+  width: 350px;
+  height: 150px; }
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px; }
+
+.center {
+  text-align: center; }
+
+.shell {
+  background-color: white;
+  width: 270px;
+  height: 320px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0px 0px 25px 1px rgba(50, 50, 50, 0.1);
+  margin-top: 100px; }
+
+.column-left {
+  float: left;
+  width: 33%; }
+
+.column-right {
+  float: right;
+  width: 33%; }
+
+.column-center {
+  display: inline-block;
+  width: 33%; }
+
+/******** LEFT SECTION ********/
+#temperature {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 90px;
+  margin-right: 70px;
+  color: #b8b8b8; }
+
+#city {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  margin-right: 60px;
+  font-size: 25px;
+  color: #b8b8b8; }
+
+.button-container {
+  padding-top: 25px; }
+
+.left {
+  padding-top: 90px; }
+
+/******************************/
+/**Buttons**/
+.temp-toggle-button {
+  width: 100px;
+  height: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  -webkit-appearance: none;
+  background-color: white;
+  outline: none; }
+
+/**Weather Icons**/
+.weather-icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  float: right;
+  margin: 40px 40px 0 0;
+  animation: weather-icon-move 5s ease-in-out infinite; }
+
+.sun {
+  background: #FFCD41;
+  border-radius: 100%;
+  box-shadow: rgba(255, 255, 0, 0.1) 0 0 0 4px;
+  animation: light 800ms ease-in-out infinite alternate, weather-icon-move 5s ease-in-out infinite; }
+
+@keyframes light {
+  from {
+    box-shadow: rgba(255, 255, 0, 0.2) 0 0 0 10px; }
+  to {
+    box-shadow: rgba(255, 255, 0, 0.2) 0 0 0 17px; } }
+
+.cloud {
+  margin-right: 60px;
+  background: #b6cede;
+  border-radius: 20px;
+  width: 25px;
+  height: 25px;
+  box-shadow: #b6cede 24px -6px 0 2px, #b6cede 10px 5px 0 5px, #b6cede 30px 5px 0 2px, #b6cede 11px -8px 0 -3px, #b6cede 25px 11px 0 -1px; }
+  .cloud:after {
+    content: "";
+    position: absolute;
+    border-radius: 10px;
+    background-color: transparent;
+    width: 4px;
+    height: 12px;
+    left: 0;
+    top: 31px;
+    transform: rotate(30deg);
+    animation: rain 800ms ease-in-out infinite alternate; }
+
+.cloudy {
+  margin-right: 60px;
+  background: #b6cede;
+  border-radius: 20px;
+  width: 25px;
+  height: 25px;
+  box-shadow: #b6cede 24px -6px 0 2px, #b6cede 10px 5px 0 5px, #b6cede 30px 5px 0 2px, #b6cede 11px -8px 0 -3px, #b6cede 25px 11px 0 -1px; }
+
+.thunderstorm {
+  margin-right: 60px;
+  background: #b6cede;
+  border-radius: 20px;
+  width: 25px;
+  height: 25px;
+  box-shadow: #b6cede 24px -6px 0 2px, #b6cede 10px 5px 0 5px, #b6cede 30px 5px 0 2px, #b6cede 11px -8px 0 -3px, #b6cede 25px 11px 0 -1px; }
+  .thunderstorm:after {
+    content: "";
+    position: absolute;
+    border-radius: 10px;
+    background-color: transparent;
+    width: 2px;
+    height: 15px;
+    left: 0px;
+    top: 35px;
+    transform: rotate(20deg);
+    animation: thunder 1000ms ease-in-out infinite alternate; }
+
+.snow {
+  margin-right: 60px;
+  background: #b6cede;
+  border-radius: 20px;
+  width: 25px;
+  height: 25px;
+  box-shadow: #b6cede 24px -6px 0 2px, #b6cede 10px 5px 0 5px, #b6cede 30px 5px 0 2px, #b6cede 11px -8px 0 -3px, #b6cede 25px 11px 0 -1px; }
+  .snow:after {
+    content: "";
+    position: absolute;
+    border-radius: 10px;
+    background-color: transparent;
+    width: 6px;
+    height: 6px;
+    left: 0px;
+    top: 35px;
+    transform: rotate(20deg);
+    animation: snow 800ms ease-in-out infinite alternate; }
+
+.misty {
+  margin-right: 60px;
+  background: #b6cede;
+  border-radius: 20px;
+  width: 25px;
+  height: 25px;
+  box-shadow: #b6cede 24px -6px 0 2px, #b6cede 10px 5px 0 5px, #b6cede 30px 5px 0 2px, #b6cede 11px -8px 0 -3px, #b6cede 25px 11px 0 -1px; }
+  .misty:after {
+    content: "";
+    position: absolute;
+    border-radius: 10px;
+    background-color: transparent;
+    width: 4px;
+    height: 35px;
+    left: 0;
+    top: 20px;
+    transform: rotate(90deg);
+    animation: mist 4000ms ease-in-out infinite alternate; }
+
+@keyframes rain {
+  from {
+    box-shadow: #2092A9 8px 0px, #2092A9 32px -6px, #2092A9 20px 0px; }
+  to {
+    box-shadow: #2092A9 8px 6px, #2092A9 32px 0px, #2092A9 20px 6px; } }
+
+@keyframes thunder {
+  from {
+    box-shadow: #2092A9 27px -2px, #2092A9 35px -8px;
+    content: url("https://s22.postimg.org/88zew2tr5/0_XKb8k_U.png"); }
+  to {
+    box-shadow: #2092A9 27px 2px, #2092A9 35px -4px;
+    content: url("https://s22.postimg.org/88zew2tr5/0_XKb8k_U.png"); } }
+
+@keyframes snow {
+  from {
+    box-shadow: #99b9ff 8px 0px 0px 1px, #99b9ff 32px -6px 0px 1px, #99b9ff 20px 0px 0px 1px; }
+  to {
+    box-shadow: rgba(153, 185, 255, 0.7) 8px 6px 0px 1.2px, rgba(153, 185, 255, 0.7) 32px 0px 0px 1.2px, rgba(153, 185, 255, 0.7) 20px 6px 0px 1.2px; } }
+
+@keyframes mist {
+  from {
+    box-shadow: #ced8ef 6px -27px, #ced8ef 14px -27px; }
+  to {
+    box-shadow: rgba(206, 216, 239, 0.7) 8px -27px, rgba(206, 216, 239, 0.7) 16px -27px; } }
+
+@keyframes weather-icon-move {
+  50% {
+    transform: translateY(-8px); } }
+
+.inspiration {
+  margin-top: 80px;
+  color: #709fbe;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center; }
+  .inspiration a {
+    color: #FF8F8F;
+    font-weight: 400;
+    animation: all 300ms ease-in-out; }
+
+@keyframes appear {
+  0% {
+    transform: scale(0); }
+  50% {
+    transform: scale(1.05); }
+  75% {
+    transform: scale(0.95); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes title-appear {
+  from {
+    opacity: 0;
+    transform: translateX(150px); }
+  to {
+    opacity: 1;
+    transform: translateX(0px); } }
