@@ -1,4 +1,6 @@
 # weather-app
+<strong>Languages: HTML/CSS+Sass/JS+jQuery</strong>
+
 This program uses the open weather map api and ip-api to display the weather in the user's area. 
 
 *add img here*
